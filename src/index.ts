@@ -5,7 +5,7 @@ class NPC{
     }
 
     public Compar(UserNum: string){
-
+        
     }
 
 }
