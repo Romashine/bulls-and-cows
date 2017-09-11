@@ -41,11 +41,14 @@ class NPC {
     }
 }
 const game = new NPC();
-while (true) {
-    const userNum = prompt("Давай угадай!") || "";
-    const answer = game.compare(userNum);
-    console.log(`${userNum}   ${answer.bulls}б ${answer.cows}к`);
-    if (answer.bulls === 4){
-        break;
+
+function start() {
+    while (true) {
+        const userNum = prompt("Давай угадай!") || "";
+        const answer = game.compare(userNum);
+        console.log(`${userNum}   ${answer.bulls}б ${answer.cows}к`);
+        if (answer.bulls === 4) {
+            break;
+        }
     }
 }
