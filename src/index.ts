@@ -10,13 +10,15 @@ class NPC {
     }
     /**
      * Проверка числа: состоит из различных 4-х цыфр
-     * @param num 
+     * @param num Проверяемое число
      */
     public check(num: string) {
         return /^(?:(\d)(?!.*\1)){4}$/.test(num);
     }
-
-    public generate() {
+    /**
+     * Генерация случайного 4-х значного числа
+     */
+        public generate() {
         let num: number;
         while (true) {
             num = Math.floor(Math.random() * 9999);
@@ -30,7 +32,7 @@ class NPC {
 
     /**
      * Сравнение userNum с NPC.num, вывод результата answer
-     * @param userNum 
+     * @param userNum ло от игрока для сравнения
      */
     public compare(userNum: string) {
         const answer: ICompareResult = {
