@@ -6,7 +6,7 @@ interface ICompareResult {
 class NPC {
     protected num: string;
     constructor() {
-        this.num = "0345";
+        this.num = this.generate();
     }
     /**
      * Проверка числа: состоит из различных 4-х цыфр
@@ -14,6 +14,18 @@ class NPC {
      */
     public check(num: string) {
         return /^(?:(\d)(?!.*\1)){4}$/.test(num);
+    }
+
+    public generate() {
+        let num: number;
+        while (true) {
+            num = Math.floor(Math.random() * 9999);
+            let strNum = num.toString();
+            strNum = strNum.length === 3 ? `0${strNum}` : strNum;
+            if (this.check(strNum)) {
+                return strNum;
+            }
+        }
     }
 
     /**
@@ -46,9 +58,13 @@ function start() {
     while (true) {
         const userNum = prompt("Давай угадай!") || "";
         const answer = game.compare(userNum);
-        console.log(`${userNum}   ${answer.bulls}б ${answer.cows}к`);
-        if (answer.bulls === 4) {
-            break;
+        if (answer.error) {
+            console.log(answer.error);
+        } else {
+            console.log(`${userNum}   ${answer.bulls}б ${answer.cows}к`);
+            if (answer.bulls === 4) {
+                break;
+            }
         }
     }
 }
