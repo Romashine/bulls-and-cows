@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/Romashine/bulls-and-cows/issues"
   },
-  "homepage": "https://github.com/Romashine/bulls-and-cows#readme"
+  "homepage": "https://github.com/Romashine/bulls-and-cows#readme",
+  "devDependencies": {
+    "rollup-plugin-typescript": "^0.8.1",
+    "typescript": "^2.5.2"
+  }
 }
