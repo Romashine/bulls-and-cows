@@ -33,8 +33,8 @@ export class App extends React.Component<IAppProps, IAppState> {
             <div>
                 <Header title="Быки и коровы" icon="https://freelance.ru/img/portfolio/pics/00/0F/3C/998635.jpg" />
                 <div>
-                    <button>Старт</button>
-                    <button>Проверить</button>
+                    <button onClick={() => { this.restart(); }}>Старт</button>
+                    <button onClick={() => { this.start(); }}>Проверить</button>
                     <input type="text"
                         onKeyPress={this.onKeyPress.bind(this)}
                         onChange={(e) => { this.setState({ number: e.currentTarget.value }); }}
