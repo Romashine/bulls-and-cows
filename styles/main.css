@@ -1,0 +1,54 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+.round {
+    background-color: rgba(255, 255, 255, 0.5);
+    display: inline-block;
+    height: 40px; 
+    width: 50px;
+    margin: 5px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.start-button {
+    background-color: rgba(0, 255, 0, 0.5);     
+}
+
+.count:hover {
+    color: red;
+}
+
+.grid {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 100px 100px auto;
+}
+
+.gridHeader {
+    background: green;
+    height: auto;
+  }
+  
+.gridStatic {
+    background: red;
+    height: 100px;
+}
+.gridGroup{
+    display: grid;
+    grid-template-columns: 150px 600px auto;
+}
+.gridFrand {
+    background: blue;
+}
+
+.gridGame {
+    background: gray;
+}
+
+.gridChat {
+    background: yellow;
+}
