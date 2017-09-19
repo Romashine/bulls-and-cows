@@ -1,0 +1,46 @@
+.round {
+    background-color: yellow;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.start-button {
+    background-color: green;     
+}
+
+.count:hover {
+    color: red;
+}
+
+.gridHeader,
+.gridStatic,
+.gridFrand,
+.gridGame,
+.gridChat {
+    display: grid;
+}
+.gridHeader {
+    background: green;
+    height: 100px;
+  }
+  
+.gridStatic {
+    background: red;
+    height: 150px;
+}
+
+.gridFrand {
+    background: blue;
+    width: 150px;
+    height: 200px;
+}
+
+.gridGame {
+    background: blueviolet;
+    width: 200px;
+}
+
+.gridChat {
+    background: yellow;
+    width: 200px;
+}

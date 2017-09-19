@@ -4,6 +4,7 @@ import { NPC } from "./npc";
 // Components
 import { Header } from "./components/header";
 import { Steps } from "./components/steps";
+import { Count } from "./components/count";
 
 export interface IAppProps { }
 export interface IAppState {
@@ -13,7 +14,7 @@ export interface IAppState {
 
 export class App extends React.Component<IAppProps, IAppState> {
 
-    static defaultState(): IAppState {
+    public static defaultState(): IAppState {
         return {
             number: "",
             steps: [],
@@ -30,16 +31,19 @@ export class App extends React.Component<IAppProps, IAppState> {
 
     public render() {
         return (
-            <div>
-                <Header title="Быки и коровы" icon="https://freelance.ru/img/portfolio/pics/00/0F/3C/998635.jpg" />
+            <div id="grid" className="grid">
+                <div className="gridHeader">
+                    <Header title="Быки и коровы" icon="https://freelance.ru/img/portfolio/pics/00/0F/3C/998635.jpg" />
+                </div>
                 <div>
-                    <button onClick={() => { this.restart(); }}>Старт</button>
-                    <button onClick={() => { this.start(); }}>Проверить</button>
+                    <div className="start-button round" onClick={() => { this.restart(); }}>Старт</div>
+                    <div className="round" onClick={() => { this.start(); }}>Проверить</div>
                     <input type="text"
                         onKeyPress={this.onKeyPress.bind(this)}
                         onChange={(e) => { this.setState({ number: e.currentTarget.value }); }}
                     />
                 </div>
+                <Count count={this.game.count} />
                 <Steps items={this.state.steps!} />
             </div>
         );
