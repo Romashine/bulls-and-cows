@@ -12,13 +12,13 @@
     color: red;
 }
 
-.gridHeader,
-.gridStatic,
-.gridFrand,
-.gridGame,
-.gridChat {
+.grid {
     display: grid;
+    grid-template-areas: "a a" 
+                         "b c" 
+                         "d d";
 }
+
 .gridHeader {
     background: green;
     height: 100px;

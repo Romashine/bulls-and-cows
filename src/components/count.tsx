@@ -16,7 +16,7 @@ export class Count extends React.Component<ICountProps, ICountState> {
     public render() {
         return (
             <div className="count">
-                <h3>Колличество ходов {this.props.count}</h3>
+                <h3>Количество ходов {this.props.count}</h3>
             </div>
         );
     }
